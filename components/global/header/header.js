@@ -1,10 +1,16 @@
 import Image from 'next/image'
+import SearchBar from '../search-bar/search-bar'
+import HeaderActions from '../header-actions/header-actions'
 import styles from './header.module.css'
 
 export default function GlobalHeader(){
     return(
     <header className={styles.globalHeader}>
-        <Image src="/logo.svg" alt="Ribbit Logo" width={32} height={32} />
+        <div className={styles['global-header__logo']}>
+            <Image src="/logo.svg" alt="Ribbit Logo" width={32} height={32} />
+        </div>
+        <SearchBar></SearchBar>
+        <HeaderActions></HeaderActions>
     </header>
     )
 }

@@ -1,0 +1,15 @@
+.header-actions {
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.header-actions__button {
+    display: none;
+}
+
+@media only screen and (min-width: 500px) {
+    .header-actions__button {
+        display: block;
+    }
+}
