@@ -1,0 +1,15 @@
+.search-bar {
+    flex-grow: 1;
+}
+
+.search-bar__label {
+    visibility: hidden;
+}
+
+.search-bar__input {
+    background-color: #efefef;
+    border: none;
+    padding: 1rem;
+    font-size: .9rem;
+    width: 100%;
+}
