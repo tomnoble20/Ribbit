@@ -1,0 +1,44 @@
+.modal[role="dialog"] {
+    align-items: center;
+    display: none;
+    justify-content: center;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    padding: 2rem;
+}
+
+.modal--active {
+    display: flex !important;
+}
+
+.modal__overlay {
+    background-color: #000;
+    opacity: .5;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.modal__inner {
+    background-color: #fff;
+    height: 50rem;
+    width: 50rem;
+    position: relative;
+    padding: 2rem;
+    z-index: 1;
+}
+
+.modal__header {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.modal__close-trigger {
+    height: 50px;
+    width: 50px;
+}
