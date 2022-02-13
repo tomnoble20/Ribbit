@@ -1,6 +1,4 @@
-import { useState } from "react";
 import styles from './header-actions.module.css'
-import LoginForm from "../../forms/login/login";
 export default function HeaderActions({listenForModalTrigger}) {
     function handleClick() {
         listenForModalTrigger(setModal => true)
