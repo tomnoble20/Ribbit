@@ -1,0 +1,8 @@
+.dropdown-panel {
+  background-color: #fff;
+  position: absolute;
+  top: 80px; /* magic number */  
+  right: 0;
+  padding: 1rem;
+  width: 200px;
+}
