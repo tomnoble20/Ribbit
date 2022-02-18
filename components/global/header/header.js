@@ -3,14 +3,14 @@ import SearchBar from '../search-bar/search-bar'
 import HeaderActions from '../header-actions/header-actions'
 import styles from './header.module.css'
 
-export default function GlobalHeader({listenForModalTrigger}){
+export default function GlobalHeader({listenForModalTrigger, isUserLoggedIn}){
     return(
     <header className={styles.globalHeader}>
         <div className={styles['global-header__logo']}>
             <Image src="/logo.svg" alt="Ribbit Logo" width={32} height={32} />
         </div>
         <SearchBar></SearchBar>
-        <HeaderActions listenForModalTrigger={listenForModalTrigger}></HeaderActions>
+        <HeaderActions listenForModalTrigger={listenForModalTrigger} isUserLoggedIn={isUserLoggedIn}></HeaderActions>
     </header>
     )
 }
