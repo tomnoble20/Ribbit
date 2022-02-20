@@ -3,7 +3,7 @@ import DropdownPanel from '../dropdown/panel/panel'
 import DropdownTrigger from '../dropdown/trigger/trigger'
 import React, { useState } from 'react';
 import {signOut, useSession } from 'next-auth/react';
-export default function HeaderActions({listenForModalTrigger, isUserLoggedIn}) {
+export default function HeaderActions({listenForModalTrigger, isUserLoggedIn, globalHeaderHeight}) {
     const [isDropdownActive, listenForDropdownTrigger] = useState(false)
 
     function handleModalTriggerClick() {
@@ -29,7 +29,7 @@ export default function HeaderActions({listenForModalTrigger, isUserLoggedIn}) {
                 </svg>
             </DropdownTrigger>
   
-            <DropdownPanel isActive={isDropdownActive} signOut={signOut}></DropdownPanel>
+            <DropdownPanel isActive={isDropdownActive} signOut={signOut} absolutePosition={globalHeaderHeight}></DropdownPanel>
         </div>
     )
 }

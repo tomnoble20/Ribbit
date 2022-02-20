@@ -2,7 +2,7 @@
   box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.25);
   background-color: #fff;
   position: absolute;
-  top: 81px; /* magic number */  
+  top: var(--top); 
   right: 0;
   padding-top: 1rem;
   padding-left: 1rem;
