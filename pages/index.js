@@ -16,7 +16,6 @@ export default function Home({Component, pageProps}) {
     return session?.user ? true : false
   }
 
-
   return (
         <div>
         <Head>
@@ -26,7 +25,7 @@ export default function Home({Component, pageProps}) {
         </Head>
         <GlobalHeader listenForModalTrigger={listenForModalTrigger} isUserLoggedIn={checkIfUserIsLoggedIn(session)}></GlobalHeader>
         <Modal isModalActive={isModalActive} modalTrigger={listenForModalTrigger}>
-        <button onClick={() => signIn()}>Sign in</button>
+          <button onClick={() => signIn()}>Sign in</button>
           <LoginForm>
           </LoginForm>
         </Modal>

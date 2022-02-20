@@ -1,0 +1,25 @@
+.dropdown-panel {
+  box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.25);
+  background-color: #fff;
+  position: absolute;
+  top: var(--top); 
+  right: 0;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 200px;
+}
+
+.dropdown-panel[aria-hidden="true"] {
+  display: none;
+}
+
+.dropdown-panel__nav {
+  padding-bottom: .5rem;
+}
+
+.dropdown-panel__footer {
+  border-top: 1px solid #aaa;
+  padding-bottom: 1rem;
+  padding-top: .5rem;
+}
