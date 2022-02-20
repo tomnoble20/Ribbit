@@ -1,14 +1,16 @@
-import styles from './panel.module.css'
+import styles from './panel.module.css';
+import Footer from './footer';
+import Nav from './nav';
+import Layout from './layout';
 
-export default function DropdownPanel() {
+/*
+ TODO: Refactor Panel to be agnostic 
+*/
+
+export default function DropdownPanel({isActive, signOut}) {
     return(
-        <div className={`${styles['dropdown-panel']}`}>
-          <nav>
-            <li>Dark Mode</li>
-          </nav>
-          <footer>
-            Logout
-          </footer>
+        <div className={`${styles['dropdown-panel']}`} aria-hidden={isActive ? "false" : "true"}>
+          <Layout nav={<Nav/>} footer={<Footer signOutMethod={signOut}/>}></Layout>
         </div>
     )
 }
