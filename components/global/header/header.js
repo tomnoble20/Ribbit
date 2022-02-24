@@ -4,7 +4,7 @@ import HeaderActions from '../header-actions/header-actions'
 import styles from './header.module.css'
 import {useState, useLayoutEffect, useRef } from 'react'
 
-export default function GlobalHeader({listenForModalTrigger, isUserLoggedIn}){
+export default function GlobalHeader({setIsModalActive, isUserLoggedIn}){
     const [elHeight, setSize] = useState()
     const ref = useRef(null)
 
@@ -18,7 +18,7 @@ export default function GlobalHeader({listenForModalTrigger, isUserLoggedIn}){
                 <Image src="/logo.svg" alt="Ribbit Logo" width={32} height={32} />
             </div>
             <SearchBar></SearchBar>
-            <HeaderActions listenForModalTrigger={listenForModalTrigger} isUserLoggedIn={isUserLoggedIn} globalHeaderHeight={elHeight}></HeaderActions>
+            <HeaderActions setIsModalActive={setIsModalActive} isUserLoggedIn={isUserLoggedIn} globalHeaderHeight={elHeight}></HeaderActions>
         </header>
     )
 }

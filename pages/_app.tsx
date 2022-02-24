@@ -3,13 +3,13 @@ import { SessionProvider } from "next-auth/react"
 
 type PropTypes = {
   Component: any,
-  session: any
+  session: null | any // todo replace all any values
 }
 
-function MyApp({ Component, pageProps: {session, ...pageProps} } : PropTypes) {
+function MyApp({ Component, session} : PropTypes) {
   return( 
     <SessionProvider session={session}>
-      <Component {...pageProps}></Component>
+      <Component session={session}></Component>
     </SessionProvider>
   )
 }

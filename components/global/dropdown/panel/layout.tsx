@@ -1,10 +1,10 @@
 
-type Props = {
+type PropTypes = {
   nav?: any,
   footer?: any
 }
 
-export default function Layout({nav, footer} : Props) {
+export default function Layout({nav, footer} : PropTypes) {
     return(
         <div>
           {nav}

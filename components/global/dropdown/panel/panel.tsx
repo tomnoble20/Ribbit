@@ -19,9 +19,7 @@ export default function DropdownPanel({isActive, signOut, absolutePosition} : Pr
     const inlineStyles = {"--top": `${absolutePosition}px`} as React.CSSProperties;
     return( 
         <div className={`${styles['dropdown-panel']}`} style={inlineStyles} aria-hidden={isActive ? "false" : "true"}>
-          <Layout>
-            <Nav/>
-            <Footer signOutMethod={signOut}/>
+          <Layout nav={<Nav/>} footer={<Footer signOutMethod={signOut}/>}>
           </Layout>
         </div>
     )
