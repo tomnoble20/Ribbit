@@ -3,7 +3,15 @@ import DropdownPanel from '../dropdown/panel/panel'
 import DropdownTrigger from '../dropdown/trigger/trigger'
 import React, { useState } from 'react';
 import {signOut, useSession } from 'next-auth/react';
-export default function HeaderActions({listenForModalTrigger, isUserLoggedIn, globalHeaderHeight}) {
+
+type PropTypes = {
+    listenForModalTrigger: Function,
+    isUserLoggedIn: Boolean,
+    globalHeaderHeight: Number
+  } 
+
+
+export default function HeaderActions({listenForModalTrigger, isUserLoggedIn, globalHeaderHeight} : PropTypes) {
     const [isDropdownActive, listenForDropdownTrigger] = useState(false)
 
     function handleModalTriggerClick() {

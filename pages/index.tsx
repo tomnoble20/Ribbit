@@ -7,7 +7,12 @@ import React, { useState } from 'react';
 import { SessionProvider } from "next-auth/react"
 import { signIn, signOut, useSession } from 'next-auth/react';
 
-export default function Home({Component, pageProps}) {
+type PropTypes = {
+  Component: any,
+  pageProps: any
+}
+
+export default function Home({Component, pageProps} : PropTypes) {
   const {data: session} = useSession();
   const [isModalActive, listenForModalTrigger] = useState(false)
 
